@@ -51,3 +51,8 @@ SPA(Single Page Application)
 
 - FrameWork
 NextJs, Gatsby, Remix 
+
+
+## React parts 
+### React-Dom
+### React-Native 
