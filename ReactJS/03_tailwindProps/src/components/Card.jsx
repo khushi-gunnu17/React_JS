@@ -36,3 +36,6 @@ function Card({username, buttonText="Visit me !"}) {          // function Card(p
 }
 
 export default Card
+
+// card from the website : 
+// https://www.devui.io/

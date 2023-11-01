@@ -7,6 +7,7 @@ import './App.css'
 
 function App() {
 
+  // in array , const datatype doesn't mean that the data cannot be changed
   // for changing the state 
   let [counter, setCounter] = useState(15)      // anything in the parameter
   // Two things we get from useState in the form of array 
@@ -17,7 +18,21 @@ function App() {
     // console.log("Value Added", Math.random());
 
     // counter += 1;
-    setCounter(counter + 1);
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
+    // useState sends the values in batches to the UI, value of counter will only be incremented by 1 because react takes a snapshot of the state and render according
+
+
+
+    setCounter((prevCounter) => prevCounter + 1);         // setCounter takes a callback 
+    // setCounter(counter => counter + 1);   // same as the above one line 
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter(prevCounter => prevCounter + 1);
+    // Now , here the value get increased by 3
+
     // console.log("clicked, now the value is : ", counter);
 
   }
