@@ -53,6 +53,6 @@ SPA(Single Page Application)
 NextJs, Gatsby, Remix 
 
 
-## React parts 
-### React-Dom
-### React-Native 
+## React library attachments 
+### React-Dom (Web based)
+### React-Native (Mobile Dev)
