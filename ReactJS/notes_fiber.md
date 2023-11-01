@@ -2,14 +2,14 @@
 - react uses fiber behind the scenes to udate vitual DOM.
 
 ## Introduction 
-- React Fiber is an ongoing reimplementation of React's core algorithm. It is the culmination of over two years of research by the React team.
+React Fiber is an ongoing reimplementation of React's core algorithm. It is the culmination of over two years of research by the React team.
 
-- The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
+The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
 
-- Other key features include the ability to pause, abort, or reuse work as new updates come in; the ability to assign priority to different types of updates; and new concurrency primitives.
+Other key features include the ability to pause, abort, or reuse work as new updates come in; the ability to assign priority to different types of updates; and new concurrency primitives.
 
 ## Reconciliation
-- reconciliation  --> 
+reconciliation  --> 
 The algorithm React uses to differentiate one tree with another to determine which parts need to be changed.
 (Git is also based on reconciliation).
 
@@ -33,12 +33,12 @@ The algorithm React uses to differentiate one tree with another to determine whi
 
 
 ## What is a fiber ?
-- We've established that a primary goal of Fiber is to enable React to take advantage of scheduling. Specifically, we need to be able to
+We've established that a primary goal of Fiber is to enable React to take advantage of scheduling. Specifically, we need to be able to
 
---> pause work and come back to it later.
---> assign priority to different types of work.
---> reuse previously completed work.
---> abort work if it's no longer needed.
+- pause work and come back to it later.
+- assign priority to different types of work.
+- reuse previously completed work.
+- abort work if it's no longer needed.
 
 In order to do any of this, we first need a way to break work down into units. In one sense, that's what a fiber is. A fiber represents a unit of work.
 
