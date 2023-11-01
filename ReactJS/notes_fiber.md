@@ -23,5 +23,24 @@ The algorithm React uses to differentiate one tree with another to determine whi
 --> Diffing of lists is performed using keys. Keys should be "stable, predictable, and unique".
 
 
+- The key points are:
+
+--> In a UI, it's not necessary for every update to be applied immediately; in fact, doing so can be wasteful, causing frames to drop and degrading the user experience.
+
+--> Different types of updates have different priorities — an animation update needs to complete more quickly than, say, an update from a data store.
+
+--> A push-based approach requires the app (you, the programmer) to decide how to schedule work. A pull-based approach allows the framework (React) to be smart and make those decisions for you.
+
+
+## What is a fiber ?
+- We've established that a primary goal of Fiber is to enable React to take advantage of scheduling. Specifically, we need to be able to
+
+--> pause work and come back to it later.
+--> assign priority to different types of work.
+--> reuse previously completed work.
+--> abort work if it's no longer needed.
+
+In order to do any of this, we first need a way to break work down into units. In one sense, that's what a fiber is. A fiber represents a unit of work.
+
 ## Webste 
 - https://github.com/acdlite/react-fiber-architecture
