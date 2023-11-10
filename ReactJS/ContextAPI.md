@@ -5,9 +5,13 @@ This makes it easier to share data between components.
 
 
 ## Redux 
-State Management
+State Management library
 - Redux-toolkit (RTK) (easier version)
 - react-redux 
+
+A store is a single source of truth 
+
+data flow
 
 ## zustand 
 easy library for state management.
