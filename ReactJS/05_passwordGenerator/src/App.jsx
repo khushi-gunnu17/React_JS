@@ -6,10 +6,12 @@ import { useState , useCallback, useEffect, useRef} from 'react';
 // useCallback is a React Hook that lets you cache a function definition between re-renders.
 // useCallback(fn , dependencies)
 // it makes the dependencies store in the cache.
+// the dependencies are in the form of array.
 
 // useEffect
 // useEffect is a React Hook that lets you synchronize a component with an external system.
 
+// useRef
 // useRef is basically used to take the reference of the value.
 
 function App() {
@@ -18,8 +20,10 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false);
   const [Password, setPassword] = useState("");
 
-  // useRef hook 
-  const passwordRef = useRef(null);
+
+  // useRef hook = we need to make a variable for it.
+  const passwordRef = useRef(null);   // default value
+
 
   const passwordGenerator = useCallback(() => {
     let pass = "";
@@ -29,8 +33,8 @@ function App() {
     if (charAllowed) str += "!@#$%^&*~_+-=";
 
     for (let i = 1; i <= length; i++) {
-      let char = Math.floor(Math.random() * str.length + 1);
-      pass += str.charAt(char);
+      let char = Math.floor(Math.random() * str.length + 1);    // random number generating as indices
+      pass += str.charAt(char);       // concatenate
     }
 
     setPassword(pass);
@@ -38,18 +42,25 @@ function App() {
   }, [length, numberAllowed, charAllowed, setPassword])
   // here, dependencies are for optimizing the value.
 
+
+
   const copyPasswordToClipboard = useCallback(() => {
     passwordRef.current?.select();
     passwordRef.current?.setSelectionRange(0, length);
     window.navigator.clipboard.writeText(Password);
-    // we can write window here 
+    // we can write window here coz we are working on core react, and if we work in next.JS, then we don't have the option of the object window as next.JS renders it on the server side
   }, [Password])
+  // here, passwordRef is used to just make the copy option look presentable to the user, when being selected, i.e, making the UI presentable
+
+
 
   // useEffect(callback , dependencies)
   useEffect(() => {
     passwordGenerator();
   }, [length, numberAllowed, charAllowed, passwordGenerator])
   // and here, they are because if there is any change , then run it again.
+
+
 
   return (
     <>
@@ -81,7 +92,7 @@ function App() {
             value={length}
             className='cursor-pointer'
             onChange={(e) => {setLength(e.target.value)}}
-             />
+            />
             <label>Length : {length}</label>
           </div>
 

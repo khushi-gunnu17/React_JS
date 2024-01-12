@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <h1 className='bg-green-400 text-black p-4 rounded-xl mb-4'>Tailwind Test</h1>
-
+      
       {/* <figure class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
         <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="https://tailwindcss.com/_next/static/media/sarah-dayan.de9b3815.jpg" alt="" width="384" height="512" />
         <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
@@ -41,7 +41,7 @@ function App() {
       </figure> */}
 
       <Card username = "Khushi Sharma" someObject = {newArr} buttonText="Click me!" />
-      <Card username= "Gunnu Jangid" buttonText="Visit Me "/>
+      <Card username = "Gunnu Jangid" buttonText="Visit Me "/>
     </>  
   )
 }

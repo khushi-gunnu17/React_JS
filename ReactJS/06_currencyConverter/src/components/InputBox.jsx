@@ -13,7 +13,7 @@ function InputBox({
     selectCurrency = "usd", 
     amountDisable = false,
     currencyDisable = false, 
-    className = "", 
+    className = "",    // taking tailwind css from the user
 }) {
     const amountInputId = useId()
 

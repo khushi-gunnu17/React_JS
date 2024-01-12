@@ -1,5 +1,6 @@
 import React from 'react'
 
+// buttonText = default value here
 function Card({username, buttonText="Visit me !"}) {          // function Card(props) {
 
     // console.log("props", props);

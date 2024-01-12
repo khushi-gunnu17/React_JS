@@ -1,5 +1,7 @@
 function customRender(reactElement, container) {
 
+    // we are setting attributes in this code for every attribute , which is not good.
+
     // const domElement = document.createElement(reactElement.type);
     // domElement.innerHTML = reactElement.children;
     // domElement.setAttribute('href', reactElement.props.href);
@@ -12,6 +14,7 @@ function customRender(reactElement, container) {
     domElement.innerHTML = reactElement.children;
 
     for (const prop in reactElement.props) {
+        // if there is children in the props.
         if (prop === 'children') continue;
 
         domElement.setAttribute(prop, reactElement.props[prop]);
@@ -20,6 +23,7 @@ function customRender(reactElement, container) {
     container.appendChild(domElement)
 }
 
+// how react sees your element 
 const reactElement = {
     type : 'a',
     props : {
