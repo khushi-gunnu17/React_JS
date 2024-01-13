@@ -1,6 +1,5 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-// useParams is a custom hook 
 
 function User() {
     const {userid} = useParams();        

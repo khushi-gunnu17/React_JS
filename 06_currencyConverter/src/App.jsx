@@ -16,8 +16,9 @@ function App() {
   const swap = () => {
     setFrom(to)
     setTo(from)
+    // even, if you don't change the below code, it won't be any problem as then only the conversion of one currency to another will take place and not the amount.
     setConvertedAmount(amount)
-    setAmount(convertedAmount)
+    setAmount(convertedAmount)  
   }
 
   const convert = () => {
@@ -50,7 +51,7 @@ function App() {
                 onCurrencyChange={(currency) => setAmount(amount)}
                 selectCurrency={from}
                 onAmountChange={(amount) => setAmount(amount)}
-               />
+              />
             </div>
 
             <div className='relative w-full h-0.5'>

@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link, NavLink} from 'react-router-dom'
-// Link is used in place of a tag, and there is no concept of refrehing the page in react so, that,s why a tag is used less.
-// NavLink provides you with additional things 
+// Link is used in place of a tag, as there is no concept of refreshing the page in react so, that's why a tag is used less.
+// NavLink provides you with additional things
 
 export default function Header() {
     return (
