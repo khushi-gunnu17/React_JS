@@ -10,20 +10,22 @@ function App() {
 
   const [todos, setTodos] = useState([])
 
-  const addTodo = (todo) => {
-    setTodos((prev) =>  [{id : Date.now(), ...todo}, ...prev])          // Brush up js 
+  const addTodo = (todo) => {     // individual todo here
+    setTodos((prev) =>  [{id : Date.now(), ...todo}, ...prev])          // we get previous values in the prev variable in the parameter
   }
 
   const updateTodo = (id, todo) => {
     setTodos((prev) => prev.map((prevTodo) => ( prevTodo.id === id ? todo : prevTodo)))
+    // prevTodo = every individual todo, we get from map 
+    // here todo, in the ternary operation dedicates a new todo.
 
-    // prev.map((eachVal) => {
-    //   if( eachVal.id === id ) {
-    //     todo
-    //   } else {
-    //     prevTodo
-    //   }
-    // })         // above one is a ternary operation 
+    prev.map((eachVal) => {
+      if( eachVal.id === id ) {
+        todo
+      } else {
+        prevTodo
+      }
+    })         // above one is a ternary operation 
   }
 
   const deleteTodo = (id) => {
