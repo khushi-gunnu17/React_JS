@@ -43,3 +43,6 @@ function App() {
 }
 
 export default App
+
+
+// Also update tailwind config file, add a Dak Mode to it in the properties.
