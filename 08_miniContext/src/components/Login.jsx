@@ -7,7 +7,7 @@ function Login() {
     const [username , setUsername] = useState('')
     const [password, setPassword] = useState('')
 
-    const {setUser} = useContext(UserContext)
+    const {setUser} = useContext(UserContext)           // setting up the user name 
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -24,11 +24,14 @@ function Login() {
             placeholder='username'/>
 
             {"  "}     {/*  space  */}
+            {"  "}      {/*Two spaces won't matter as only one space is considered*/}
 
             <input type='password' 
             value={password}
             onChange={(e) => setPassword(e.target.value)} 
             placeholder='password'/>
+            
+            {"  "}
 
             <button onClick={handleSubmit}>Submit</button>
         </div>
