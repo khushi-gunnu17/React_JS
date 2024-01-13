@@ -2,6 +2,7 @@ import React from 'react'
 // By wrapping any data with the context, it becomes a provider.
 // Global User Context = the data will get access to this global variable.
 // Redux = organinzing the state management
+// react - redux ,  Redux - toolkit (RTK)
 
 const UserContext = React.createContext()
 
