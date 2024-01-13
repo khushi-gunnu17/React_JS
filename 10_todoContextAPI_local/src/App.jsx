@@ -19,13 +19,13 @@ function App() {
     // prevTodo = every individual todo, we get from map 
     // here todo, in the ternary operation dedicates a new todo.
 
-    prev.map((eachVal) => {
-      if( eachVal.id === id ) {
-        todo
-      } else {
-        prevTodo
-      }
-    })         // above one is a ternary operation 
+    // prev.map((eachVal) => {
+    //   if( eachVal.id === id ) {
+    //     todo
+    //   } else {
+    //     prevTodo
+    //   }
+    // })         // above one is a ternary operation 
   }
 
   const deleteTodo = (id) => {
