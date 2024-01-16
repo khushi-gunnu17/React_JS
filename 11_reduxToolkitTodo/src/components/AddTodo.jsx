@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import {addTodo} from '../features/todo/todoSlice'
 
-// dispatch uses reducers to make changes in the store.
+// dispatch uses reducers to make changes (like addition) in the store.
+// useDispatch and useSelector are from react - redux.
 
 function AddTodo() {
 
@@ -12,7 +13,7 @@ function AddTodo() {
     const addTodoHandler = (e) => {
         e.preventDefault()
         dispatch(addTodo(input))
-        setInput('')
+        setInput('')        // clean the input field after using. - good practice
     }
 
     return (
@@ -32,7 +33,7 @@ function AddTodo() {
                 Add Todo
             </button>
         </form>
-    ) 
+    )
 }
 
 export default AddTodo;
