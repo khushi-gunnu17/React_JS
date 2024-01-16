@@ -42,7 +42,7 @@ function App() {
   // all the values are in the form of a string and not object, so we need to convert it into the json format.
 
   // Functionalities 
-  // It is necessary to do get first 
+  // It is necessary to do "get" first 
   useEffect(() => {
     const todos = JSON.parse(localStorage.getItem("todos"))
 
@@ -67,6 +67,7 @@ function App() {
               </div>
 
               <div className='flex flex-wrap gap-y-3'>
+              {/* Loop and add todo item here. */}
                 {todos.map((todo) => (
                   <div key={todo.id}
                     className='w-full'
