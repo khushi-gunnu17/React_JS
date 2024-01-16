@@ -15,3 +15,11 @@ function App() {
 }
 
 export default App
+
+
+// libraries to be installed --> 
+// npm install @reduxjs/toolkit
+// npm install react - redux
+
+
+// Visit websites on React and React redux and redux toolkit
