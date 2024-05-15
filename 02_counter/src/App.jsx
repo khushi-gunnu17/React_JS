@@ -26,10 +26,16 @@ function App() {
 
 
 
-    setCounter((prevCounter) => prevCounter + 1);         // setCounter takes a callback 
+    setCounter((prevCounter) => {
+      if (prevCounter < 20 && prevCounter >= 1) {
+          return prevCounter + 1
+      } else {
+          return prevCounter
+      }
+  })        // setCounter takes a callback 
     // setCounter(counter => counter + 1);   // same as the above one line 
-    setCounter((prevCounter) => prevCounter + 1);
-    setCounter(prevCounter => prevCounter + 1);
+    // setCounter((prevCounter) => prevCounter + 1);
+    // setCounter(prevCounter => prevCounter + 1);
     // Now, here the value gets increased by 3.
     // interview Question
     // prevCounter = last updated state of counter, the name can be anything by the ways
@@ -39,7 +45,13 @@ function App() {
   }
 
   const removeValue = () => {
-    setCounter(counter - 1);
+    setCounter((prevCounter) => {
+      if (prevCounter > 1 && prevCounter <= 20) {
+          return prevCounter - 1
+      } else {
+          return prevCounter
+      }
+  })
     // console.log("clicked, now the value is : ", counter);
   }
 

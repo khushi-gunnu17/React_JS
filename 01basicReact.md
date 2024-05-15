@@ -2,9 +2,7 @@ npm - node package manager
 npx = Node Package eXecute 
 create-react-app = utility (software)
 
---> npx create-react-app	(For installing the software)
-
-pckage.json is the main file.
+--> npx create-react-app	(For installing the software)l
 
 --> npm run start / npm start	(For starting the Project)
 

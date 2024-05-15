@@ -35,7 +35,7 @@ const anotherElement = (
 )
 
 
-// Virtual DOM
+// React creates its own virtual DOM
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>

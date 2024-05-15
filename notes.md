@@ -6,10 +6,10 @@
 
 ## When should I learn React ?
 - After mastering JS.
-- most project don't need raect in initial phase.
+- most project don't need react in initial phase.
 
 ## Why react was created ?
-- Ghost message problem / phantom message problem
+- (Ghost message problem / phantom message problem) in Facebook
 
 
 state -> JS  and   UI -> DOM 
@@ -21,7 +21,7 @@ first implemented by Khan Academy -> Unsplash
 - You don't know how JS works or DOM works.
 
 ## React Learning processes 
-- Go-in depth = Babel, fibre , Virtual DOM, Diffing Algorithm, Hydration 
+- Go-in depth = Babel, fibre , Virtual DOM, Diffing Algorithm, Hydration, Tree shaking
 
 - By making projects (one topic at a time)
 ToDo, Calculator, GitHub Api
@@ -30,8 +30,8 @@ ToDo, Calculator, GitHub Api
 ## React is a Library 
 - FrameWork Vs Library 
 
-Framework = military 
-Library = cooldude , more freedom, 
+Framework = military , less freedom than libraries
+Library = cooldude , more freedom, concepts less 
 
 ## Topics To learn 
 - core of react (state or UI manipulation, JSX)
@@ -43,7 +43,7 @@ HTML in JS = JSX
 SPA(Single Page Application)
 
 ## Additional addon to raect 
-- Router (React don't have Router).    (React - Router DOM) addon
+- Router (React don't have Router).    (React - Router DOM) addon (additional package)
 
 - State Management (React don't have management).
 --> redux, Redux toolkit, Zustand , Context APi  = JS libraries
@@ -76,14 +76,14 @@ NextJs, Gatsby, Remix
 
 
 ### npm = to install libraries 
-### npx = to just direactly execute a library 
+### npx = to just directly execute a library 
 
 
 
 - npx create-react-app = bulky
 
 
-npm - node package manager 
+npm = node package manager 
 npx = Node Package eXecute 
 create-react-app = utility (software)
 
