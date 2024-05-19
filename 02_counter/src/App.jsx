@@ -32,7 +32,7 @@ function App() {
       } else {
           return prevCounter
       }
-  })        // setCounter takes a callback 
+    })        // setCounter takes a callback 
     // setCounter(counter => counter + 1);   // same as the above one line 
     // setCounter((prevCounter) => prevCounter + 1);
     // setCounter(prevCounter => prevCounter + 1);

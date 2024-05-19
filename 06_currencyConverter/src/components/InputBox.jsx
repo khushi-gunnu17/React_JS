@@ -45,7 +45,7 @@ function InputBox({
                     onChange = {(event) => onCurrencyChange && onCurrencyChange(event.target.value)}
                     disabled={currencyDisable}
                 >       
-                    {/* If you are using loops in jsx, then ou must give a key to the attributes. */}
+                    {/* If you are using loops in jsx, then you must give a key to the attributes. */}
                     {currencyOptions.map((currency) => (
                         <option key={currency} value={currency}>
                             {currency}

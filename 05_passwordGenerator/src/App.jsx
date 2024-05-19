@@ -19,6 +19,7 @@ function App() {
   const [numberAllowed, setNumberAllowed] = useState(false);
   const [charAllowed, setCharAllowed] = useState(false);
   const [Password, setPassword] = useState("");
+  const [buttonClicked, setButtonCLicked] = useState(false);
 
 
   // useRef hook = we need to make a variable for it.
@@ -49,6 +50,10 @@ function App() {
     passwordRef.current?.setSelectionRange(0, length);
     window.navigator.clipboard.writeText(Password);
     // we can write window here coz we are working on core react, and if we work in next.JS, then we don't have the option of the object window as next.JS renders it on the server side
+
+    setButtonCLicked(true);
+    setTimeout(() => setButtonCLicked(false), 200);   // reset after 200ms
+    
   }, [Password])
   // here, passwordRef is used to just make the copy option look presentable to the user, when being selected, i.e, making the UI presentable
 
@@ -65,7 +70,7 @@ function App() {
   return (
     <>
       <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-orange-500 bg-gray-800'>
-        <h1 className='text-white text-center'>Password Generator</h1>
+        <h1 className='text-white text-center py-2'>Password Generator</h1>
 
         <div className='flex shadow rounded-lg overflow-hidden mb-4'>
           <input 
@@ -79,7 +84,8 @@ function App() {
 
           <button
             onClick={copyPasswordToClipboard}
-            className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>Copy
+            className={`outline-none px-3 py-0.5 shrink-0 ${buttonClicked ? 'bg-blue-500' : 'bg-blue-700'} text-white`}>          
+            Copy
           </button>
         </div>
 
@@ -96,7 +102,7 @@ function App() {
             <label>Length : {length}</label>
           </div>
 
-          <div className='flex items-center gap-x-1'>
+          <div className='flex items-center gap-x-1 px-2'>
             <input
             type='checkbox'
             defaultChecked={numberAllowed}
