@@ -1,3 +1,5 @@
+// how the data is accessed
+
 import React, {useContext} from 'react'
 import UserContext from '../context/UserContext'
 

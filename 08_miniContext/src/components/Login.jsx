@@ -1,4 +1,4 @@
-// How the data is accessed
+// How the data is sent
 
 import React, {useState, useContext} from 'react'
 import UserContext from '../context/UserContext'
